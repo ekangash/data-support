@@ -1,0 +1,19 @@
+{
+  "name": "data-support",
+  "version": "0.0.0",
+  "main": "./build/dist/data-support.iife.js",
+  "module": "./build/dist/data-support.iife.js",
+  "scripts": {
+    "build": "rimraf build/ && vite build && copyfiles ./package.json build"
+  },
+  "author": "",
+  "type": "module",
+  "license": "Internet Systems Consortium (ISC)",
+  "description": "",
+  "devDependencies": {
+    "vite": "^6.0.1",
+    "rimraf": "^6.0.1",
+    "copyfiles": "^2.4.1",
+    "@types/node": "^22.0.0"
+  }
+}

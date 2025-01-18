@@ -1,0 +1,11 @@
+services:
+  dev:
+    container_name: entity-dev
+    image: node:22.12.0
+    working_dir: /var/www/app
+    command: ["sleep", "infinity"]
+    user: 1000:1000
+    volumes:
+      - .:/var/www/app
+    ports:
+      - ${DOCKER_PORT_DEV:-3000}:5173

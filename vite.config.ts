@@ -30,6 +30,9 @@ export default defineConfig({
       fileName: (format) => fileName[format],
     },
   },
+  test: {
+    watch: false,
+  },
   resolve: {
     alias: [
       {

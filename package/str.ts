@@ -15,7 +15,7 @@ export const str = {
    *
    * @return {boolean} Флаг проверки на строку
    */
-  assert(str) {
+  assert(str: any): boolean {
     return typeof str === "string";
   },
   /**
@@ -25,7 +25,7 @@ export const str = {
    *
    * @return {boolean} Флаг проверки на строку
    */
-  contains(str) {
+  contains(str: any): boolean {
     return typeof str === "string" && str.length > 0;
   },
   /**
@@ -35,7 +35,7 @@ export const str = {
    *
    * @return {boolean} Флаг проверки на строку
    */
-  empty(str) {
+  empty(str: any): boolean {
     return typeof str === "string" && str.length === 0 && str === "";
   },
 };

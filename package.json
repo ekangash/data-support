@@ -10,7 +10,13 @@
     }
   },
   "scripts": {
-    "build": "rimraf build/ && vite build && copyfiles ./package.json build"
+    "build": "rimraf build/ && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts && copyfiles ./package.json build",
+    "dts": "dts-bundle-generator --config ./dts-bundle-generator.config.ts",
+    "test": "vitest",
+    "lint": "eslint .",
+    "test:coverage": "vitest --coverage",
+    "lint:scripts": "eslint . --ext .ts",
+    "format:scripts": "prettier packages tests --write"
   },
   "author": "Eduard Kangash",
   "type": "module",

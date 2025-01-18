@@ -1,0 +1,6 @@
+.history
+.vscode
+.ide
+coverage
+dist
+node_modules

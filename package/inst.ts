@@ -1,10 +1,3 @@
-/** 1 NodeModules */
-/** 2 Config, Packages, Endpoints, Enums */
-/** 3 Components, Hooks, Icons - NodeModules */
-/** 4 Components, Hooks - Custom */
-/** 5 Entities, Stores, Services */
-/** 6 Resources */
-
 /**
  * Вспомогательные методы для работы с экземплярами классов,
  * которые были сформированы через конструкцию 'new Class()'.
@@ -36,7 +29,7 @@ export const inst = {
    *
    * @return {any} Значение.
    */
-  get(instance: any, name: string, defaultValue: any = null) {
+  get(instance, name: string, defaultValue = undefined) {
     return this.isset(instance, name) ? instance[name] : defaultValue;
   },
   /**

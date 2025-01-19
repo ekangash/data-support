@@ -1,7 +1,6 @@
-/** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
-import { arr, bool, obj } from "@/packages/support";
+import { arr } from "@/package/arr";
+import { bool } from "@/package/bool";
+import { obj } from "@/package/obj";
 
 /**
  * Вспомогательные методы для работы со строкой.

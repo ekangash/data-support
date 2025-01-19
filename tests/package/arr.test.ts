@@ -3,7 +3,7 @@ import { describe, it, expect } from "vitest";
 
 /** 2 App - Components, Hooks */
 /** 3 Entities, Stores, Packages, Enums ... */
-import { arr } from "@/packages/support";
+import { arr } from "@/package";
 
 describe("arr.empty()", () => {
   it("Должен вернуть true, если массив пустой", () => {

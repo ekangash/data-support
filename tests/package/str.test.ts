@@ -3,7 +3,7 @@ import { describe, it, expect } from "vitest";
 
 /** 2 App - Components, Hooks */
 /** 3 Entities, Stores, Packages, Enums ... */
-import { str } from "@/packages/support";
+import { str } from "@/package";
 
 describe("str.contains()", () => {
   it("Должно вернуть true, если строка не пустая", () => {

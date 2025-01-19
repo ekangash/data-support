@@ -3,7 +3,7 @@ import { describe, it, expect } from "vitest";
 
 /** 2 App - Components, Hooks */
 /** 3 Entities, Stores, Packages, Enums ... */
-import { obj } from "@/packages/support";
+import { obj } from "@/package";
 
 describe("obj.contains()", () => {
   it("Должно вернуть true, если у объекта есть свойства", () => {

@@ -1,6 +1,3 @@
-/** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
 /**
  * Вспомогательные методы для работы с логическими значениями.
  *
@@ -14,7 +11,7 @@ export const bool = {
    *
    * @return {boolean} Флаг проверки на объект
    */
-  assert(bool: any): boolean {
+  assert(bool: boolean): boolean {
     return typeof bool === "boolean";
   },
 };

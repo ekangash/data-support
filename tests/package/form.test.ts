@@ -3,7 +3,7 @@ import { describe, it, expect } from "vitest";
 
 /** 2 App - Components, Hooks */
 /** 3 Entities, Stores, Packages, Enums ... */
-import { bool, form, obj } from "@/packages/support";
+import { form } from "@/package";
 
 describe("Form", () => {
   const payload = {
@@ -40,27 +40,5 @@ describe("Form", () => {
     const formData = form.prepareFormData(payload);
 
     expect(formData).toBeInstanceOf(FormData);
-
-    // for (const [key, value] of formData.entries()) {
-    //     const keys = key.split('[').map((k) => k.replace(']', ''));
-    //@todo Функция fromNested не достаёт значения из вложенного массива.
-    //     const payloadValue = obj.fromNested(payload, keys, '');
-    //
-    //     expect(formData.has(key)).toBe(true);
-    //
-    //     let appendValue = value;
-    //
-    //     if (appendValue === null) {
-    //         appendValue = ''
-    //     } else if (bool.assert(appendValue)) {
-    //         appendValue = appendValue ? '1' : '0';
-    //     }
-    //
-    //     if (appendValue === '1') {
-    //         const x = 1;
-    //     }
-    //
-    //     expect(String(appendValue)).toEqual(String(payloadValue));
-    // }
   });
 });

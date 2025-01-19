@@ -3,7 +3,7 @@ import { describe, it, expect } from "vitest";
 
 /** 2 App - Components, Hooks */
 /** 3 Entities, Stores, Packages, Enums ... */
-import { dts } from "@/packages/support";
+import { dts } from "@/package";
 
 describe("dts", () => {
   it("Должно вернуть true, если строка не пустая", () => {

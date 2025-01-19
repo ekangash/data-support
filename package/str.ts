@@ -1,7 +1,3 @@
-/** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
-
 /**
  * Вспомогательные методы для работы со строкой.
  *
@@ -15,7 +11,7 @@ export const str = {
    *
    * @return {boolean} Флаг проверки на строку
    */
-  assert(str: any): boolean {
+  assert(str): boolean {
     return typeof str === "string";
   },
   /**
@@ -25,7 +21,7 @@ export const str = {
    *
    * @return {boolean} Флаг проверки на строку
    */
-  contains(str: any): boolean {
+  contains(str): boolean {
     return typeof str === "string" && str.length > 0;
   },
   /**
@@ -35,7 +31,7 @@ export const str = {
    *
    * @return {boolean} Флаг проверки на строку
    */
-  empty(str: any): boolean {
+  empty(str): boolean {
     return typeof str === "string" && str.length === 0 && str === "";
   },
 };

@@ -1,6 +1,9 @@
+/// <reference types="vitest" />
 import path from "path";
 import { defineConfig } from "vite";
 import packageJson from "./package.json";
+import { LibraryFormats } from "vite";
+import { ModuleFormat } from "rollup";
 
 const getPackageName = () => {
   return packageJson.name;
@@ -14,9 +17,9 @@ const getPackageNameCamelCase = () => {
   }
 };
 
-const fileName = {
+const fileName: { es: string; iife: string } = {
   es: `${getPackageName()}.js`,
-  iife: `${getPackageName()}.umd.cjs`,
+  iife: `${getPackageName()}.cjs`,
 };
 
 export default defineConfig({
@@ -24,21 +27,13 @@ export default defineConfig({
   build: {
     outDir: "./build/dist",
     lib: {
-      entry: path.resolve(__dirname, "/package/index.js"),
+      entry: path.resolve(__dirname, "/build/package/index.js"),
       name: getPackageNameCamelCase(),
-      formats: Object.keys(fileName),
-      fileName: (format) => fileName[format],
+      formats: Object.keys(fileName) as LibraryFormats[],
+      fileName: (format: ModuleFormat) => fileName[format as keyof typeof fileName] as string,
     },
   },
-  test: {
-    watch: false,
-  },
   resolve: {
-    alias: [
-      {
-        find: "@",
-        replacement: path.resolve(__dirname, "./")
-      },
-    ],
+    alias: [{ find: "@", replacement: path.resolve(__dirname, "./") }],
   }
 });

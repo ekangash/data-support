@@ -1,7 +1,3 @@
-/** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
-
 /**
  * Вспомогательные методы для работы с датами
  *
@@ -69,7 +65,7 @@ export const datetime = {
    * @return {string} Время без даты в строковом формате
    */
   convertUTCToISOTime(dateUTC) {
-    if (!(dateUTC instanceof window.Date)) {
+    if (!(dateUTC instanceof Date)) {
       return "";
     }
 
@@ -88,7 +84,7 @@ export const datetime = {
    * @return {string} Дата в формате ISO
    */
   convertUTCToISO(dateUTC) {
-    if (!(dateUTC instanceof window.Date)) {
+    if (!(dateUTC instanceof Date)) {
       return "";
     }
 

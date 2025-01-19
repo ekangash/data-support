@@ -1,8 +1,4 @@
-/** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
-
-import { str } from "@/packages/support/str";
+import { str } from "@/package/str";
 
 /**
  * Вспомогательные методы для работы с файлами системы (file system).
@@ -17,7 +13,7 @@ export const fls = {
    *
    * @return {boolean}
    */
-  assert(value: any): boolean {
+  assert(value): boolean {
     return (
       typeof window !== "undefined" &&
       typeof File !== "undefined" &&
@@ -36,7 +32,7 @@ export const fls = {
     const allowedImageMimetypes: string[] = [".jpg", ".webp", ".png", ".jpeg"];
     let srcIsValid: boolean = false;
 
-    for (let allowedImageMimetype of allowedImageMimetypes) {
+    for (const allowedImageMimetype of allowedImageMimetypes) {
       if (src.includes(allowedImageMimetype)) {
         srcIsValid = true;
 
@@ -52,7 +48,7 @@ export const fls = {
    *
    * @return {string}
    */
-  fileIsValid(file: any): boolean {
+  fileIsValid(file): boolean {
     return (
       (str.contains(file) && (fls.srcImageHasAllowedMimetype(file) || file.includes("blob:"))) ||
       this.assert(file)
@@ -73,7 +69,7 @@ export const fls = {
    *
    * @return {string}
    */
-  validateImageMimetype(file: any): void {
+  validateImageMimetype(file): void {
     const allowedImageMimetypes: string[] = [
       "image/jpeg",
       "image/gif",
@@ -93,7 +89,7 @@ export const fls = {
    *
    * @return {string}
    */
-  validateSize(file: any): void {
+  validateSize(file): void {
     if (file.size > 1024 * 1024 * 10) {
       throw Error("Загружаемый размер файла не должен превышать 10 мБ");
     }

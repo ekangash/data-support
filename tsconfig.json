@@ -1,37 +1,36 @@
 {
-  "target": "ES2020",
-  "useDefineForClassFields": true,
-  "lib": ["ES2020", "DOM", "DOM.Iterable"],
-  "module": "ESNext",
-  "skipLibCheck": true,
+    /* Bundler mode */
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": false,
+    "isolatedModules": false,
+    "moduleDetection": "force",
+    "noEmit": true,
 
-  /* Bundler mode */
-  "moduleResolution": "bundler",
-  "allowImportingTsExtensions": true,
-  "isolatedModules": false,
-  "moduleDetection": "force",
-  "noEmit": true,
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "ESNext",
 
-  /* Linting */
-  "strict": true,
-  "noUnusedLocals": true,
-  "noUnusedParameters": true,
-  "noFallthroughCasesInSwitch": true,
-  "noUncheckedSideEffectImports": true,
-  "allowSyntheticDefaultImports": true,
-  "include": [
-    "packages/*.ts",
-    "*.ts",
-    "node_modules/@types/node/globals.d.ts",
-    "node_modules/@types/node/globals.d.ts"
-  ],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@*": ["./*"]
+        /* Linting */
+        "strict": false,                         // Включить строгий режим
+        "noUnusedLocals": true,                 // Ошибка при наличии неиспользуемых локальных переменных
+        "noUnusedParameters": false,              // Ошибка при наличии неиспользуемых параметров функций
+        "noFallthroughCasesInSwitch": true,     // Ошибка при отсутствии break в switch-case
+        "noUncheckedSideEffectImports": true,    // Ошибка при импорте с побочными эффектами
+        "allowSyntheticDefaultImports": true,     // Разрешить синтаксис импорта по умолчанию для CommonJS модулей
+        "useDefineForClassFields": true,
+
+        /* Path */
+        "baseUrl": ".",
+        "paths": { "@/*": ["./*"] },
+        "rootDir": "./package",
+        "outDir": "./build/package"
     },
-    "allowSyntheticDefaultImports": true,
-    "rootDir": "."
-  },
-  "allowJs": false
+    "include": [
+        "package/*.ts",
+    ],
+    "exclude": [
+        "node_modules",
+        "tests"
+    ],
+    "allowJs": false
 }

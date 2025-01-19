@@ -1,7 +1,3 @@
-/** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
-
 /**
  * Вспомогательные методы для работы с классами
  *
@@ -17,7 +13,7 @@ export const cls = {
    * @return {boolean} true, если класс является потомком класса-прототипа, иначе false.
    */
   isSubclassOf(subclass, parentClass) {
-    return parentClass.isPrototypeOf(subclass);
+    return parentClass.prototype.isPrototypeOf.call(subclass);
   },
   /**
    * Определяет имя объекта конструктора

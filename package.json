@@ -1,31 +1,49 @@
 {
   "name": "data-support",
   "version": "0.0.0",
-  "main": "./dist/data-support.umd.cjs",
+  "main": "./dist/data-support.cjs",
   "module": "./dist/data-support.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "import": "./dist/data-support.js",
-      "require": "./dist/data-support.umd.cjs"
+      "require": "./dist/data-support.cjs"
     }
   },
   "scripts": {
-    "build": "rimraf build/ && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts && copyfiles ./package.json build",
+    "build": "rimraf build/ && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts && copyfiles ./package.json build && rimraf build/package",
     "dts": "dts-bundle-generator --config ./dts-bundle-generator.config.ts",
     "test": "vitest",
     "lint": "eslint .",
     "test:coverage": "vitest --coverage",
     "lint:scripts": "eslint . --ext .ts",
-    "format:scripts": "prettier packages tests --write"
+    "format:scripts": "prettier package tests --write"
   },
   "author": "Eduard Kangash",
-  "type": "module",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "vite": "^6.0.1",
-    "rimraf": "^6.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "@vitejs/plugin-react-swc": "^3.7.2",
+    "@vitest/coverage-v8": "^2.0.4",
+    "axios": "^1.7.9",
+    "axios-mock-adapter": "^2.1.0",
     "copyfiles": "^2.4.1",
-    "@types/node": "^22.0.0"
+    "dts-bundle-generator": "^9.5.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.14.0",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.15.0",
+    "vite": "^6.0.1",
+    "vitest": "^2.0.4"
   }
 }

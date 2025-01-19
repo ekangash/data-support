@@ -3,7 +3,7 @@ import { describe, it, expect } from "vitest";
 
 /** 2 App - Components, Hooks */
 /** 3 Entities, Stores, Packages, Enums ... */
-import { inst } from "@/packages/support";
+import { inst } from "@/package";
 
 describe("cls.isClassInstance()", () => {
   it("Должно вернуть true, если переменная является экземпляром класса", () => {

@@ -2,5 +2,5 @@
 .vscode
 .ide
 coverage
-dist
+build
 node_modules

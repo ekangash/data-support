@@ -1,20 +1,20 @@
 {
   "name": "data-support",
   "version": "0.0.0",
-  "main": "./dist/data-support.cjs",
-  "module": "./dist/data-support.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "type": "module",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/data-support.js",
-      "require": "./dist/data-support.cjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "scripts": {
-    "build": "rimraf build/ && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts && copyfiles ./package.json build && rimraf build/package",
+    "build": "rimraf build/ && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts && copyfiles README.md build && copyfiles ./package.json build && rimraf build/package",
     "dts": "dts-bundle-generator --config ./dts-bundle-generator.config.ts",
     "test": "vitest",
     "lint": "eslint .",

@@ -30,7 +30,6 @@ export default defineConfig({
       name: getPackageNameCamelCase(),
       formats: Object.keys(fileName) as LibraryFormats[],
       fileName: (format: ModuleFormat, name: string): string => {
-        console.log('format', format)
 
         if (format === "es") {
           return `${name}.js`

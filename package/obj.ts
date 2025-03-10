@@ -155,7 +155,7 @@ export const obj = {
    *
    * @return {any} Объект с данными
    */
-  get<T extends object = any>(source: object, names: string, defaultValue = undefined): T {
+  get<T = any>(source: object, names: string, defaultValue = undefined): T {
     let nameParts = names.split(".");
     let value = source;
 

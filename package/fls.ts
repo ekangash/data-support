@@ -86,11 +86,12 @@ export const fls = {
   /**
    *
    * @param {File} file
+   * @param {number} size
    *
    * @return {string}
    */
-  validateSize(file): void {
-    if (file.size > 1024 * 1024 * 10) {
+  validateSize(file: File, size: number): void {
+    if (file.size > 1024 * 1024 * size) {
       throw Error("Загружаемый размер файла не должен превышать 10 мБ");
     }
   },

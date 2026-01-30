@@ -31,8 +31,6 @@
     "@typescript-eslint/parser": "^8.18.0",
     "@vitejs/plugin-react-swc": "^3.7.2",
     "@vitest/coverage-v8": "^2.0.4",
-    "axios": "^1.7.9",
-    "axios-mock-adapter": "^2.1.0",
     "copyfiles": "^2.4.1",
     "dts-bundle-generator": "^9.5.1",
     "eslint": "^8.57.0",
